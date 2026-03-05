@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 229, 255, 0.3) #080a10;
+  }
+
+  body {
+    background-color: #080a10;
+    color: #f8fafc;
+    font-family: 'DM Sans', 'PingFang SC', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Millimeter grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+        rgba(0, 229, 255, 0.03) 0px,
+        rgba(0, 229, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0, 229, 255, 0.03) 0px,
+        rgba(0, 229, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+    background-size: 20px 20px;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+
+  ::selection {
+    background-color: rgba(0, 229, 255, 0.25);
+    color: #f8fafc;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(8, 10, 16, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .card {
+    background: #161b28;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(0, 229, 255, 0.5);
+  }
+
+  .btn-ghost {
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    padding: 0.625rem 1.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  }
+
+  .btn-fill {
+    background: #00e5ff;
+    color: #080a10;
+    padding: 0.625rem 1.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #00e5ff;
+  }
+
+  .btn-fill:hover {
+    background: #33ebff;
+    box-shadow: 0 0 24px rgba(0, 229, 255, 0.3);
+  }
+
+  .section-title {
+    font-family: 'Space Grotesk', 'HarmonyOS Sans SC', 'PingFang SC', sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+}
