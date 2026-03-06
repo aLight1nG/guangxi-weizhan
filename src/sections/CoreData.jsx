@@ -78,9 +78,9 @@ export default function CoreData() {
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="card p-6 mb-12"
+          className="card p-6 mb-6"
         >
-          <ResponsiveContainer width="100%" height={320}>
+          <ResponsiveContainer width="100%" height={240}>
             <BarChart data={errorData} barGap={8}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -125,7 +125,7 @@ export default function CoreData() {
         </motion.div>
 
         {/* Boost cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
           {boosts.map((b, i) => (
             <motion.div
               key={b.metal}

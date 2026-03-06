@@ -98,10 +98,10 @@ export default function Product() {
                   className="card p-5"
                 >
                   <div className="mb-3">{m.icon}</div>
-                  <h4 className="font-heading font-semibold text-text-primary text-sm">
+                  <h4 className="font-heading font-semibold text-text-primary text-base">
                     {m.name}
                   </h4>
-                  <p className="mt-1 font-mono text-xs text-accent-cyan">{m.param}</p>
+                  <p className="mt-1 font-mono text-sm text-accent-cyan">{m.param}</p>
                 </motion.div>
               ))}
             </div>
@@ -129,10 +129,10 @@ export default function Product() {
                   <div className="absolute -left-5 top-1 w-3 h-3 rounded-full border-2 border-accent-cyan bg-bg-primary" />
                   {/* Step content */}
                   <div className="card p-4">
-                    <span className="font-mono text-accent-cyan text-xs mr-2">
+                    <span className="font-mono text-accent-cyan text-sm mr-2">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-sm text-text-primary">{step}</span>
+                    <span className="text-base text-text-primary">{step}</span>
                   </div>
                 </motion.div>
               ))}

@@ -48,7 +48,7 @@ export default function PainPoints() {
           痛点<span className="text-accent-red">与</span>破局
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left: pain points (red) */}
           <div>
             <motion.h3

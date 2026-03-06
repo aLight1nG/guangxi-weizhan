@@ -52,7 +52,7 @@ export default function Team() {
             >
               {/* Avatar placeholder */}
               <div
-                className={`w-14 h-14 rounded-full ${m.color} flex items-center justify-center mx-auto mb-3 font-heading font-bold text-xl`}
+                className={`w-20 h-20 rounded-full ${m.color} flex items-center justify-center mx-auto mb-3 font-heading font-bold text-2xl`}
               >
                 {m.initials}
               </div>

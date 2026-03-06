@@ -55,7 +55,7 @@ export default function HowItWorks() {
         </motion.p>
 
         {/* Three step cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
           {steps.map((s, i) => (
             <motion.div
               key={s.num}
@@ -64,13 +64,13 @@ export default function HowItWorks() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="card p-6"
+              className="card p-6 flex flex-col"
             >
               <div className="text-3xl text-accent-cyan mb-3">{s.num}</div>
               <h3 className="font-heading font-semibold text-text-primary mb-2">
                 {s.title}
               </h3>
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed flex-1">
                 {s.desc}
               </p>
             </motion.div>
@@ -82,7 +82,7 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="card p-8"
+          className="card p-8 border-t-2 border-t-accent-cyan/30"
         >
           <h3 className="text-xs text-text-secondary uppercase tracking-wider mb-6 font-heading">
             核心公式

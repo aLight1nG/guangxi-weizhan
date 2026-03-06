@@ -114,7 +114,7 @@ export default function Comparison() {
                   {row.key === 'price' ? (
                     <div
                       className={`font-mono font-bold ${col.rows.priceSize} ${
-                        col.highlight ? 'text-accent-cyan' : 'text-text-primary'
+                        col.highlight ? 'text-accent-cyan' : 'text-gray-200'
                       }`}
                     >
                       {col.rows[row.key]}
@@ -124,7 +124,7 @@ export default function Comparison() {
                       className={`text-sm font-medium ${
                         col.highlight && row.key === 'error'
                           ? 'text-accent-cyan'
-                          : 'text-text-primary'
+                          : 'text-gray-200'
                       }`}
                     >
                       {col.rows[row.key]}
@@ -159,7 +159,7 @@ export default function Comparison() {
               )}
               <h3
                 className={`font-heading font-bold text-base mb-5 text-center ${
-                  col.highlight ? 'text-accent-cyan' : 'text-text-primary'
+                  col.highlight ? 'text-accent-cyan' : 'text-gray-200'
                 }`}
               >
                 {col.name}
@@ -170,13 +170,13 @@ export default function Comparison() {
                   {row.key === 'price' ? (
                     <div
                       className={`font-mono font-bold ${col.rows.priceSize} ${
-                        col.highlight ? 'text-accent-cyan' : 'text-text-primary'
+                        col.highlight ? 'text-accent-cyan' : 'text-gray-200'
                       }`}
                     >
                       {col.rows[row.key]}
                     </div>
                   ) : (
-                    <div className="text-sm text-text-primary">{col.rows[row.key]}</div>
+                    <div className="text-sm text-gray-200">{col.rows[row.key]}</div>
                   )}
                 </div>
               ))}

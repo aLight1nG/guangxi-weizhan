@@ -74,7 +74,7 @@ export default function Contact() {
         </motion.p>
 
         {/* Collaboration direction cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 mb-12">
           {directions.map((d, i) => (
             <motion.div
               key={d.title}
@@ -83,7 +83,7 @@ export default function Contact() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="card p-5 text-center group"
+              className="card p-4 sm:p-5 text-center group"
             >
               <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform">
                 {d.icon}

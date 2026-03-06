@@ -37,10 +37,10 @@ export default function ScrollIndicator() {
   return (
     <div className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-1">
       {/* Track */}
-      <div className="relative w-px h-48 bg-border-cyan">
+      <div className="relative w-px h-48 bg-border-cyan/40">
         {/* Progress fill */}
         <div
-          className="absolute top-0 left-0 w-full bg-accent-cyan transition-all duration-200"
+          className="absolute top-0 left-0 w-full bg-accent-cyan/50 transition-all duration-200"
           style={{ height: `${progress * 100}%` }}
         />
       </div>
@@ -52,7 +52,7 @@ export default function ScrollIndicator() {
             key={s.id}
             href={`#${s.id}`}
             className={`font-mono text-[10px] leading-none transition-colors duration-200 ${
-              i === active ? 'text-accent-cyan' : 'text-gray-700'
+              i === active ? 'text-accent-cyan/70' : 'text-gray-800'
             }`}
           >
             {s.label}
