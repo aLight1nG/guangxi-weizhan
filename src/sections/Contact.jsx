@@ -106,10 +106,13 @@ export default function Contact() {
           className="card p-8 text-center"
         >
           <p className="text-text-secondary text-sm">
-            联系邮箱：<span className="text-accent-cyan font-mono">2678733087@qq.com</span>
+            指导老师：<span className="text-accent-cyan">尹*</span>
           </p>
           <p className="text-text-secondary text-sm mt-2">
-            联系电话：<span className="text-accent-cyan font-mono">18185515702</span>
+            联系邮箱：<span className="text-accent-cyan font-mono">267******7@qq.com</span>
+          </p>
+          <p className="text-text-secondary text-sm mt-2">
+            联系电话：<span className="text-accent-cyan font-mono">181*******2</span>
           </p>
         </motion.div>
 

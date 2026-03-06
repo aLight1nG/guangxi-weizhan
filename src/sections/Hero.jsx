@@ -70,7 +70,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-8 overflow-hidden"
+      className="relative flex flex-col items-center justify-center px-6 pt-24 pb-10 overflow-hidden"
     >
       <DiffractionBg />
 

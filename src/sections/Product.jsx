@@ -59,12 +59,27 @@ const modules = [
   },
 ]
 
-const aiSteps = [
-  '上传图像',
-  '灰度增强',
-  '梯度方差选行',
-  '高斯亚像素拟合',
-  '输出 CTE + 不确定度',
+const advantages = [
+  {
+    title: '高精度',
+    desc: '光学衍射放大 + 亚像素算法，相对误差 < 0.4%，精度提升最高 8.6 倍',
+  },
+  {
+    title: '低成本',
+    desc: '整机 BOM 成本约 ¥4,450，仅为进口设备的 5%',
+  },
+  {
+    title: '全自动',
+    desc: 'AI 自动识别衍射条纹并解算 CTE，无需人工读数，单次测量 < 10 分钟',
+  },
+  {
+    title: '易部署',
+    desc: '模块化设计，即插即用，适配现有高校物理实验室环境',
+  },
+  {
+    title: '可溯源',
+    desc: '全流程数据自动记录，实验结果可追溯、可复现',
+  },
 ]
 
 export default function Product() {
@@ -107,33 +122,28 @@ export default function Product() {
             </div>
           </div>
 
-          {/* Right: AI pipeline timeline */}
+          {/* Right: product advantages */}
           <div>
             <h3 className="font-heading font-semibold text-text-secondary text-sm uppercase tracking-wider mb-6">
-              AI 算法流程
+              核心优势
             </h3>
-            <div className="relative pl-8">
-              {/* Vertical line */}
-              <div className="absolute left-3 top-2 bottom-2 w-px bg-accent-cyan/30" />
-              {aiSteps.map((step, i) => (
+            <div className="space-y-4">
+              {advantages.map((a, i) => (
                 <motion.div
-                  key={step}
+                  key={a.title}
                   custom={i}
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="relative mb-8 last:mb-0"
+                  className="card p-5 border-accent-cyan/20 hover:border-accent-cyan/50"
                 >
-                  {/* Dot */}
-                  <div className="absolute -left-5 top-1 w-3 h-3 rounded-full border-2 border-accent-cyan bg-bg-primary" />
-                  {/* Step content */}
-                  <div className="card p-4">
-                    <span className="font-mono text-accent-cyan text-sm mr-2">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-base text-text-primary">{step}</span>
-                  </div>
+                  <h4 className="font-heading font-semibold text-accent-cyan text-base">
+                    {a.title}
+                  </h4>
+                  <p className="mt-1 text-sm text-text-secondary leading-relaxed">
+                    {a.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
