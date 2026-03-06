@@ -106,9 +106,6 @@ export default function Contact() {
           className="card p-8 text-center"
         >
           <p className="text-text-secondary text-sm">
-            指导老师：<span className="text-accent-cyan">尹*</span>
-          </p>
-          <p className="text-text-secondary text-sm mt-2">
             联系邮箱：<span className="text-accent-cyan font-mono">267******7@qq.com</span>
           </p>
           <p className="text-text-secondary text-sm mt-2">

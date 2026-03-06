@@ -72,7 +72,7 @@ export default function Team() {
           className="card p-6 text-center"
         >
           <p className="text-text-secondary text-sm mb-3">
-            指导老师：<span className="text-text-primary">尹跃</span>
+            指导老师：<span className="text-text-primary">尹*</span>
           </p>
           <div className="inline-block border border-accent-cyan/30 rounded-card px-4 py-2">
             <span className="text-xs text-accent-cyan font-mono">
