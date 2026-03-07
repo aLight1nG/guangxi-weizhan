@@ -1,27 +1,22 @@
 import { useEffect, useState } from 'react'
 
 const sections = [
-  { id: 'hero', label: '00' },
-  { id: 'pain-points', label: '01' },
-  { id: 'core-data', label: '02' },
-  { id: 'product', label: '03' },
-  { id: 'how-it-works', label: '04' },
-  { id: 'comparison', label: '05' },
-  { id: 'team', label: '06' },
-  { id: 'contact', label: '07' },
+  { id: 'hero', num: '01', name: '概览' },
+  { id: 'pain-points', num: '02', name: '痛点' },
+  { id: 'core-data', num: '03', name: '数据' },
+  { id: 'product', num: '04', name: '产品' },
+  { id: 'how-it-works', num: '05', name: '原理' },
+  { id: 'comparison', num: '06', name: '对比' },
+  { id: 'team', num: '07', name: '团队' },
+  { id: 'contact', num: '08', name: '联系' },
 ]
 
 export default function ScrollIndicator() {
   const [active, setActive] = useState(0)
-  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     const onScroll = () => {
       const scrollY = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      setProgress(docHeight > 0 ? scrollY / docHeight : 0)
-
-      // Find active section
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i].id)
         if (el && el.offsetTop - 200 <= scrollY) {
@@ -35,30 +30,25 @@ export default function ScrollIndicator() {
   }, [])
 
   return (
-    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-1">
-      {/* Track */}
-      <div className="relative w-px h-48 bg-border-cyan/40">
-        {/* Progress fill */}
-        <div
-          className="absolute top-0 left-0 w-full bg-accent-cyan/50 transition-all duration-200"
-          style={{ height: `${progress * 100}%` }}
-        />
-      </div>
-
-      {/* Tick marks */}
-      <div className="mt-3 flex flex-col gap-3">
-        {sections.map((s, i) => (
+    <div className="fixed left-5 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-start gap-4">
+      {sections.map((s, i) => {
+        const isActive = i === active
+        return (
           <a
             key={s.id}
             href={`#${s.id}`}
-            className={`font-mono text-[10px] leading-none transition-colors duration-200 ${
-              i === active ? 'text-accent-cyan/70' : 'text-gray-800'
+            className={`font-mono leading-none transition-all duration-300 ${
+              isActive
+                ? 'text-accent-cyan text-[13px] font-normal'
+                : 'text-white/15 text-[11px] font-light'
             }`}
+            style={{ fontWeight: isActive ? 400 : 300 }}
           >
-            {s.label}
+            <span className="mr-1.5">{s.num}</span>
+            <span>{s.name}</span>
           </a>
-        ))}
-      </div>
+        )
+      })}
     </div>
   )
 }

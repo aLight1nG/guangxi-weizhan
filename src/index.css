@@ -13,6 +13,8 @@
     background-color: #080a10;
     color: #f8fafc;
     font-family: 'DM Sans', 'PingFang SC', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
     overflow-x: hidden;
   }
 
@@ -60,7 +62,7 @@
   .card {
     background: #161b28;
     border: 1px solid rgba(0, 229, 255, 0.2);
-    border-radius: 4px;
+    border-radius: 12px;
     transition: border-color 0.3s ease;
   }
 
@@ -72,7 +74,7 @@
     border: 1px solid #00e5ff;
     color: #00e5ff;
     padding: 0.625rem 1.75rem;
-    border-radius: 4px;
+    border-radius: 12px;
     font-weight: 500;
     transition: all 0.3s ease;
     background: transparent;
@@ -87,7 +89,7 @@
     background: #00e5ff;
     color: #080a10;
     padding: 0.625rem 1.75rem;
-    border-radius: 4px;
+    border-radius: 12px;
     font-weight: 600;
     transition: all 0.3s ease;
     border: 1px solid #00e5ff;
@@ -101,7 +103,7 @@
   .section-title {
     font-family: 'Space Grotesk', 'HarmonyOS Sans SC', 'PingFang SC', sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2.625rem;
     line-height: 1.2;
   }
 }

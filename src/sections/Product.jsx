@@ -84,7 +84,7 @@ const advantages = [
 
 export default function Product() {
   return (
-    <section id="product" className="py-24 px-6">
+    <section id="product" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 8 }}
@@ -95,13 +95,13 @@ export default function Product() {
           产品介绍
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left: hardware modules */}
-          <div>
+        <div className="grid md:grid-cols-2 gap-14 items-stretch">
+          {/* Left: hardware modules — 2×2 grid, stretch to match right column */}
+          <div className="flex flex-col">
             <h3 className="font-heading font-semibold text-text-secondary text-[15px] uppercase tracking-wider mb-6">
               硬件模块
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-5 flex-1">
               {modules.map((m, i) => (
                 <motion.div
                   key={m.name}
@@ -110,24 +110,24 @@ export default function Product() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="card p-5"
+                  className="card p-6 flex flex-col justify-center"
                 >
                   <div className="mb-3">{m.icon}</div>
-                  <h4 className="font-heading font-semibold text-text-primary text-base">
+                  <h4 className="font-heading font-semibold text-text-primary text-[17px]">
                     {m.name}
                   </h4>
-                  <p className="mt-1 font-mono text-[15px] text-accent-cyan">{m.param}</p>
+                  <p className="mt-2 font-mono text-[15px] text-accent-cyan leading-relaxed">{m.param}</p>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Right: product advantages */}
-          <div>
+          {/* Right: product advantages — flex column to fill height */}
+          <div className="flex flex-col">
             <h3 className="font-heading font-semibold text-text-secondary text-[15px] uppercase tracking-wider mb-6">
               核心优势
             </h3>
-            <div className="space-y-4">
+            <div className="flex flex-col gap-4 flex-1">
               {advantages.map((a, i) => (
                 <motion.div
                   key={a.title}
@@ -136,12 +136,12 @@ export default function Product() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="card p-5 border-accent-cyan/20 hover:border-accent-cyan/50"
+                  className="card p-6 border-accent-cyan/20 hover:border-accent-cyan/50 flex-1 flex flex-col justify-center"
                 >
-                  <h4 className="font-heading font-semibold text-accent-cyan text-base">
+                  <h4 className="font-heading font-semibold text-accent-cyan text-[17px]">
                     {a.title}
                   </h4>
-                  <p className="mt-1 text-[15px] text-text-secondary leading-relaxed">
+                  <p className="mt-2 text-[15px] text-text-secondary leading-relaxed">
                     {a.desc}
                   </p>
                 </motion.div>

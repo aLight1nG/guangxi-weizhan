@@ -20,7 +20,7 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {
-        card: '4px',
+        card: '12px',
       },
       boxShadow: {
         'glow-cyan': '0 0 20px rgba(0, 229, 255, 0.25)',
