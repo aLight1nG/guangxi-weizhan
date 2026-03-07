@@ -144,11 +144,11 @@ export default function Hero() {
                   suffix={kpi.suffix || ''}
                 />
               </div>
-              <div className="mt-2 text-sm text-text-secondary">{kpi.label}</div>
+              <div className="mt-2 text-[15px] text-text-secondary">{kpi.label}</div>
             </motion.div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 text-center mt-4">
+        <p className="text-[13px] text-gray-500 text-center mt-4">
           数据来源：第十一届全国大学生物理实验竞赛（创新类）实验报告
         </p>
       </div>

@@ -98,7 +98,7 @@ export default function Product() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left: hardware modules */}
           <div>
-            <h3 className="font-heading font-semibold text-text-secondary text-sm uppercase tracking-wider mb-6">
+            <h3 className="font-heading font-semibold text-text-secondary text-[15px] uppercase tracking-wider mb-6">
               硬件模块
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -116,7 +116,7 @@ export default function Product() {
                   <h4 className="font-heading font-semibold text-text-primary text-base">
                     {m.name}
                   </h4>
-                  <p className="mt-1 font-mono text-sm text-accent-cyan">{m.param}</p>
+                  <p className="mt-1 font-mono text-[15px] text-accent-cyan">{m.param}</p>
                 </motion.div>
               ))}
             </div>
@@ -124,7 +124,7 @@ export default function Product() {
 
           {/* Right: product advantages */}
           <div>
-            <h3 className="font-heading font-semibold text-text-secondary text-sm uppercase tracking-wider mb-6">
+            <h3 className="font-heading font-semibold text-text-secondary text-[15px] uppercase tracking-wider mb-6">
               核心优势
             </h3>
             <div className="space-y-4">
@@ -141,7 +141,7 @@ export default function Product() {
                   <h4 className="font-heading font-semibold text-accent-cyan text-base">
                     {a.title}
                   </h4>
-                  <p className="mt-1 text-sm text-text-secondary leading-relaxed">
+                  <p className="mt-1 text-[15px] text-text-secondary leading-relaxed">
                     {a.desc}
                   </p>
                 </motion.div>

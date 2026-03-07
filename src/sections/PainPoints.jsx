@@ -76,7 +76,7 @@ export default function PainPoints() {
                       <h4 className="font-heading font-semibold text-text-primary">
                         {p.title}
                       </h4>
-                      <p className="mt-1 text-sm text-text-secondary leading-relaxed">
+                      <p className="mt-1 text-[15px] text-text-secondary leading-relaxed">
                         {p.desc}
                       </p>
                     </div>
@@ -118,8 +118,8 @@ export default function PainPoints() {
                   </div>
                   {/* Step label + description */}
                   <div className="py-2">
-                    <span className="font-mono text-accent-cyan text-sm">{step.title}</span>
-                    <span className="text-gray-400 text-sm ml-2">→ {step.desc}</span>
+                    <span className="font-mono text-accent-cyan text-[15px]">{step.title}</span>
+                    <span className="text-gray-400 text-[15px] ml-2">→ {step.desc}</span>
                   </div>
                 </motion.div>
               ))}
@@ -132,7 +132,7 @@ export default function PainPoints() {
               transition={{ delay: 0.6 }}
               className="mt-8 card p-5 border-l-2 border-accent-cyan bg-bg-card"
             >
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-[15px] text-text-secondary leading-relaxed">
                 通过光学放大与AI识别，将测量误差从主观人为因素转变为可控客观物理因素
               </p>
             </motion.div>

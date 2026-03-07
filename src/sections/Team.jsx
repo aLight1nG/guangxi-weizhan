@@ -33,7 +33,7 @@ export default function Team() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-text-secondary text-sm mb-14"
+          className="text-center text-text-secondary text-[15px] mb-14"
         >
           从原理验证到工程落地
         </motion.p>
@@ -56,8 +56,8 @@ export default function Team() {
               >
                 {m.initials}
               </div>
-              <div className="text-xs text-text-secondary">成员 {i + 1}</div>
-              <div className="mt-1 text-sm font-medium text-text-primary">
+              <div className="text-[13px] text-text-secondary">成员 {i + 1}</div>
+              <div className="mt-1 text-[15px] font-medium text-text-primary">
                 {m.role}
               </div>
             </motion.div>
@@ -71,11 +71,11 @@ export default function Team() {
           viewport={{ once: true }}
           className="card p-6 text-center"
         >
-          <p className="text-text-secondary text-sm mb-3">
+          <p className="text-text-secondary text-[15px] mb-3">
             指导老师：<span className="text-text-primary">尹*</span>
           </p>
           <div className="inline-block border border-accent-cyan/30 rounded-card px-4 py-2">
-            <span className="text-xs text-accent-cyan font-mono">
+            <span className="text-[13px] text-accent-cyan font-mono">
               第十五届「挑战杯」中国全国大学生创业计划竞赛
             </span>
           </div>

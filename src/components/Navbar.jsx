@@ -42,7 +42,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary hover:text-accent-cyan transition-colors duration-200"
+              className="text-[15px] text-text-secondary hover:text-accent-cyan transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -76,7 +76,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary hover:text-accent-cyan"
+              className="text-[15px] text-text-secondary hover:text-accent-cyan"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}

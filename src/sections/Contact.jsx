@@ -68,7 +68,7 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-text-secondary text-sm mb-14"
+          className="text-center text-text-secondary text-[15px] mb-14"
         >
           多种合作方式，期待您的联系
         </motion.p>
@@ -88,10 +88,10 @@ export default function Contact() {
               <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform">
                 {d.icon}
               </div>
-              <h3 className="font-heading font-semibold text-text-primary text-sm mb-2">
+              <h3 className="font-heading font-semibold text-text-primary text-[15px] mb-2">
                 {d.title}
               </h3>
-              <p className="text-xs text-text-secondary leading-relaxed">
+              <p className="text-[13px] text-text-secondary leading-relaxed">
                 {d.desc}
               </p>
             </motion.div>
@@ -105,7 +105,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="card p-8 text-center"
         >
-          <p className="text-text-secondary text-sm">
+          <p className="text-text-secondary text-[15px]">
             联系邮箱：<span className="text-accent-cyan font-mono">267******7@qq.com</span>
           </p>
           <p className="text-text-secondary text-sm mt-2">

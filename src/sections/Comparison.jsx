@@ -72,7 +72,7 @@ export default function Comparison() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-text-secondary text-sm mb-14"
+          className="text-center text-text-secondary text-[15px] mb-14"
         >
           三种方案全面对比
         </motion.p>
@@ -108,7 +108,7 @@ export default function Comparison() {
 
               {rowLabels.map((row) => (
                 <div key={row.key} className="mb-4">
-                  <div className="text-xs text-text-secondary mb-1">
+                  <div className="text-[13px] text-text-secondary mb-1">
                     {row.label}
                   </div>
                   {row.key === 'price' ? (
@@ -121,7 +121,7 @@ export default function Comparison() {
                     </div>
                   ) : (
                     <div
-                      className={`text-sm font-medium ${
+                      className={`text-[15px] font-medium ${
                         col.highlight && row.key === 'error'
                           ? 'text-accent-cyan'
                           : 'text-gray-200'
@@ -166,7 +166,7 @@ export default function Comparison() {
               </h3>
               {rowLabels.map((row) => (
                 <div key={row.key} className="mb-3">
-                  <div className="text-xs text-text-secondary mb-1">{row.label}</div>
+                  <div className="text-[13px] text-text-secondary mb-1">{row.label}</div>
                   {row.key === 'price' ? (
                     <div
                       className={`font-mono font-bold ${col.rows.priceSize} ${
@@ -176,7 +176,7 @@ export default function Comparison() {
                       {col.rows[row.key]}
                     </div>
                   ) : (
-                    <div className="text-sm text-gray-200">{col.rows[row.key]}</div>
+                    <div className="text-[15px] text-gray-200">{col.rows[row.key]}</div>
                   )}
                 </div>
               ))}

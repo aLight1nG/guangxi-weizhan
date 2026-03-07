@@ -68,7 +68,7 @@ export default function CoreData() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-text-secondary mb-14 text-sm"
+          className="text-center text-text-secondary mb-14 text-[15px]"
         >
           相对误差对比（%）· 传统千分表法 vs AI衍射法
         </motion.p>
@@ -136,7 +136,7 @@ export default function CoreData() {
               viewport={{ once: true }}
               className="card p-6 text-center"
             >
-              <div className="text-text-secondary text-sm mb-2">
+              <div className="text-text-secondary text-[15px] mb-2">
                 {b.metal} · 精度提升
               </div>
               <div className="font-mono text-4xl font-bold text-accent-cyan">
@@ -153,7 +153,7 @@ export default function CoreData() {
           viewport={{ once: true }}
           className="card p-6"
         >
-          <h3 className="font-heading font-semibold text-sm text-text-secondary mb-4">
+          <h3 className="font-heading font-semibold text-[15px] text-text-secondary mb-4">
             不确定度结果&nbsp;
             <span className="font-mono text-accent-cyan">
               (10⁻⁶/°C)
@@ -162,7 +162,7 @@ export default function CoreData() {
           <div className="grid grid-cols-3 gap-4">
             {uncertainties.map((u) => (
               <div key={u.metal} className="text-center">
-                <div className="text-text-secondary text-xs mb-1">{u.metal}</div>
+                <div className="text-text-secondary text-[13px] mb-1">{u.metal}</div>
                 <div className="font-mono text-xl text-accent-cyan font-bold">
                   {u.value}
                 </div>
